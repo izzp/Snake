@@ -32,6 +32,11 @@ namespace Snake
         private void timer1_Tick(object sender, EventArgs e)
         {
             s.Move(dir);
+            if (s.SnakeDie() == true)
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("你输了");
+            }
         }
 
 

@@ -64,5 +64,13 @@ namespace Snake
                         break;
                 }
         }
+        public bool SnakeDie()//判断蛇是否撞墙
+        {
+            if (((Label)snake[0]).Top <= 0 || ((Label)snake[0]).Top >= 800 || ((Label)snake[0]).Left <= 0 || ((Label)snake[0]).Left >= 480)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
