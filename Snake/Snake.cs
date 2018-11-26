@@ -34,7 +34,7 @@ namespace Snake
                 c.Controls.Add(l);
             }
         }
-        public void Move(Direction d)
+        public void Move(Direction d) //蛇移动
         {
             for (int i = length - 1; i > 0;i-- )
             {
@@ -66,7 +66,7 @@ namespace Snake
         }
         public bool SnakeDie()//判断蛇是否撞墙
         {
-            if (((Label)snake[0]).Top <= 0 || ((Label)snake[0]).Top >= 800 || ((Label)snake[0]).Left <= 0 || ((Label)snake[0]).Left >= 480)
+            if (((Label)snake[0]).Top <= 0 || ((Label)snake[0]).Top >= 460 || ((Label)snake[0]).Left <= 0 || ((Label)snake[0]).Left >= 580)
             {
                 return true;
             }
