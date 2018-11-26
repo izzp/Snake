@@ -1,0 +1,8 @@
+F:\02_GIT\Snake\Snake\bin\Release\Snake.exe.config
+F:\02_GIT\Snake\Snake\bin\Release\Snake.exe
+F:\02_GIT\Snake\Snake\bin\Release\Snake.pdb
+F:\02_GIT\Snake\Snake\obj\Release\Snake.Form1.resources
+F:\02_GIT\Snake\Snake\obj\Release\Snake.Properties.Resources.resources
+F:\02_GIT\Snake\Snake\obj\Release\Snake.csproj.GenerateResource.Cache
+F:\02_GIT\Snake\Snake\obj\Release\Snake.exe
+F:\02_GIT\Snake\Snake\obj\Release\Snake.pdb

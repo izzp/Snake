@@ -18,7 +18,7 @@ namespace Snake
     }
     class Snake
     {
-        int length=5;//蛇长
+        int length=5;//初始蛇长
         Color snakeColor=Color.Red;//蛇身颜色
         ArrayList snake = new ArrayList();
         Point location;
@@ -27,7 +27,7 @@ namespace Snake
             get { return location; }
             set { location = value; }
         }
-        public Snake(Control c)//生成蛇身
+        public Snake(Control c)//生成初始蛇身
         {
             for(int i=0;i<length;i++)
             {
@@ -78,7 +78,7 @@ namespace Snake
             {
                 return true;
             }
-            return false;
+            return false;      
         }
     }
 }

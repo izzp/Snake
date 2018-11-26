@@ -19,18 +19,11 @@ namespace Snake
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
            s=new Snake(panel1);
            f = new Food(panel1);
         }
-
-        private void btnRun_Click(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             s.Move(dir);
@@ -42,6 +35,7 @@ namespace Snake
             if(s.Location==f.Location)
             {
                 f.updateLocation(panel1);
+                
             }
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -59,10 +53,14 @@ namespace Snake
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void 开始游戏ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
         }
 
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("雨心Dream");
+        }
     }
 }
