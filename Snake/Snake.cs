@@ -21,7 +21,13 @@ namespace Snake
         int length=5;//蛇长
         Color snakeColor=Color.Red;//蛇身颜色
         ArrayList snake = new ArrayList();
-        public Snake(Control c)
+        Point location;
+        public Point Location
+        {
+            get { return location; }
+            set { location = value; }
+        }
+        public Snake(Control c)//生成蛇身
         {
             for(int i=0;i<length;i++)
             {
@@ -33,6 +39,7 @@ namespace Snake
                 snake.Add(l);
                 c.Controls.Add(l);
             }
+            location = ((Label)snake[0]).Location;
         }
         public void Move(Direction d) //蛇移动
         {
@@ -63,6 +70,7 @@ namespace Snake
                         }
                         break;
                 }
+                location = ((Label)snake[0]).Location;
         }
         public bool SnakeDie()//判断蛇是否撞墙
         {

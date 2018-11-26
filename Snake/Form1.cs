@@ -13,6 +13,7 @@ namespace Snake
     public partial class Form1 : Form
     {
         Snake s;
+        Food f;
         Direction dir;
         public Form1()
         {
@@ -22,6 +23,7 @@ namespace Snake
         private void Form1_Load(object sender, EventArgs e)
         {
            s=new Snake(panel1);
+           f = new Food(panel1);
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -37,9 +39,11 @@ namespace Snake
                 timer1.Enabled = false;
                 MessageBox.Show("你输了");
             }
+            if(s.Location==f.Location)
+            {
+                f.updateLocation(panel1);
+            }
         }
-
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             switch(e.KeyCode)
