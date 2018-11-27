@@ -15,6 +15,7 @@ namespace Snake
         Snake s;
         Food f;
         Direction dir;
+        int fraction=0;
         public Form1()
         {
             InitializeComponent();
@@ -30,12 +31,14 @@ namespace Snake
             if (s.SnakeDie() == true)
             {
                 timer1.Enabled = false;
-                MessageBox.Show("你输了");
+                MessageBox.Show("你输了，你的得分为"+fraction+"分");
             }
             if(s.Location==f.Location)
             {
                 f.updateLocation(panel1);
                 s.SnakeLong(panel1);
+                fraction++;//分数加1
+                labelFraction.Text = ("分数：" + fraction);//更新分数
             }
             
         }
@@ -51,6 +54,20 @@ namespace Snake
                 case Keys.Down:dir=Direction.Down; break;
                 case Keys.D:
                 case Keys.Right:dir=Direction.Right; break;
+                case Keys.Space:
+                    {
+                        if(timer1.Enabled==true)
+                        {
+                            timer1.Enabled = false;
+                            this.Text = ("贪吃蛇------游戏已暂停");
+                        }
+                        else
+                        {
+                            timer1.Enabled = true;
+                            this.Text = ("贪吃蛇");
+                        }
+                    }
+                    break;
             }
         }
 

@@ -22,16 +22,10 @@ namespace Snake
         Color snakeColor=Color.Red;//蛇身颜色
         ArrayList snake = new ArrayList();
         Point location;
-
         public Point Location
         {
             get { return location; }
             set { location = value; }
-        }
-        public ArrayList snakes
-        {
-            get { return snake; }
-            set { snake = value; }
         }
         public Snake(Control c)//生成初始蛇身
         {
@@ -53,7 +47,7 @@ namespace Snake
             l.BackColor=snakeColor;
             l.Size = new Size(20, 20);
             l.BorderStyle = BorderStyle.FixedSingle;
-            l.Location = new Point(600, 480);
+            l.Location = new Point(600, 480);//不加这一句的话会左上角会闪
             snake.Add(l);
             c.Controls.Add(l);
         }
