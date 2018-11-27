@@ -29,11 +29,12 @@ namespace Snake
             c.Controls.Add(l);
             location = l.Location;
         }
-        public void updateLocation(Control c)//更新食物位置
+        public void updateLocation(Control c)//更新食物位置,吃完可以再生成一个
         {
             c.Controls.Remove(l);
             Random r=new Random();
-            l.Location=new Point(r.Next(2,28)*20, r.Next(2,22)*20);          
+            l.Location=new Point(r.Next(2,28)*20, r.Next(2,22)*20);
+            Location = l.Location;
             c.Controls.Add(l);
         }
     }
