@@ -35,8 +35,9 @@ namespace Snake
             if(s.Location==f.Location)
             {
                 f.updateLocation(panel1);
-                
+                s.SnakeLong(panel1);
             }
+            
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
